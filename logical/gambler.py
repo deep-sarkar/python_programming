@@ -5,8 +5,7 @@ class Gambler:
     def gamble(self, stack, goal, no_of_bet):
         win = 0
         loss = 0
-        total_try= win + loss
-
+        total_try = 0
         while no_of_bet != 0:
             
             if stack == goal:
@@ -24,6 +23,7 @@ class Gambler:
                 stack -= 1
                 loss += 1
             
+            total_try = win + loss
             no_of_bet -= 1
         
         if no_of_bet == 0 and stack > goal:
