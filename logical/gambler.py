@@ -5,10 +5,12 @@ class Gambler:
     def gamble(self, stack, goal, no_of_bet):
         win = 0
         loss = 0
+        total_try=0
+        
         while no_of_bet != 0:
-            total_try = win + loss
+            
             if stack == goal:
-                print("you won the game. Total try :",total_try)
+                print("you won the game. Total try :", total_try)
                 break
             toss = random.randrange(2)
             if stack == 0:
@@ -22,8 +24,8 @@ class Gambler:
                 stack -= 1
                 loss += 1
             
+            total_try = win + loss
             no_of_bet -= 1
-
         
         if no_of_bet == 0 and stack > goal:
             print("You loss the bet... your stack is :", stack, "total try :", total_try)
@@ -33,7 +35,7 @@ class Gambler:
 
 if __name__ == '__main__':
     gambler_game = Gambler()
-    gambler_game.gamble(10, 15, 10)
+    gambler_game.gamble(10, 13, 10)
     
 
 
