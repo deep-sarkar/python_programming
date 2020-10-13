@@ -10,12 +10,12 @@ class Gambler:
             if stack == goal:
                 print("you won the game. Total try :",total_try)
                 break
-            toss = random.random()
+            toss = random.randrange(2)
             if stack == 0:
                 print("You loss the bet...")
                 break
 
-            if toss > 0.5:
+            if toss == 1:
                 stack += 1
                 win += 1
             else:
