@@ -12,11 +12,7 @@ def count(num):
 
 
 def power(digit, power):
-    power_value = 1
-    while power != 0:
-        power_value *= digit
-        power -= 1
-    return power_value
+    return digit ** power
 
 
 def isArmstrong(num):
