@@ -1,3 +1,8 @@
+'''
+LISTEN and SILENT is an anagram
+'''
+
+
 class AnagramDetection:
     
     # Convert upper case
